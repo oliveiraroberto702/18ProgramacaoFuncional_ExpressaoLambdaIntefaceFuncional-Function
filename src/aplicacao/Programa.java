@@ -19,9 +19,9 @@ public class Programa {
 		lista.add(new Produto("Notebook", 1200.00));
 		lista.add(new Produto("Tablet", 450.00));
 		lista.add(new Produto("HD Case", 80.90));
+				
+		List<String> nomes = lista.stream().map(p -> p.getNome().toUpperCase()).collect(Collectors.toList());
 		
-		Function<Produto, String> func = p -> p.getNome().toUpperCase();
-		List<String> nomes = lista.stream().map(func).collect(Collectors.toList());
 		nomes.forEach(System.out::println);
 	}
 
