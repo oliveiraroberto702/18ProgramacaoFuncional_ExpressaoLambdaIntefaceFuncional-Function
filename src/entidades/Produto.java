@@ -22,11 +22,8 @@ public class Produto {
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
-	public static void staticAtualizaPreco(Produto p) {
-		p.setPreco(p.getPreco()*1.1);
-	}
-	public void no_staticAtualizaPreco() {
-		preco = preco*1.1; // p.setPreco(p.getPreco()*1.1));
+	public static String staticUpperCaseNome(Produto p) {
+		return p.getNome().toUpperCase();
 	}
 	@Override
 	public String toString() {

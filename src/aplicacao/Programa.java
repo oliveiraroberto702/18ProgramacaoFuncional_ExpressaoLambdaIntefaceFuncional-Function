@@ -6,7 +6,6 @@ import java.util.Locale;
 import java.util.stream.Collectors;
 
 import entidades.Produto;
-import util.UpperCaseNome;
 
 public class Programa {
 
@@ -20,7 +19,7 @@ public class Programa {
 		lista.add(new Produto("Tablet", 450.00));
 		lista.add(new Produto("HD Case", 80.90));
 		
-		List<String> nomes = lista.stream().map(new UpperCaseNome()).collect(Collectors.toList());
+		List<String> nomes = lista.stream().map(Produto::staticUpperCaseNome).collect(Collectors.toList());
 		nomes.forEach(System.out::println);
 	}
 
